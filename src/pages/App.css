@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-url: url(../img/bg-desktop.jpg);
+  --text-color: white;
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.5);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --switch-gb-url: url(../img/MoonStars.svg);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+}
+.light {
+  --bg-url: url(../img/bg-desktop-light.jpg);
+  --text-color: black;
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.5);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --switch-gb-url: url(../img/SunStars.svg);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+}
+/* Modificações do Body */
+#App * {
+  font-family: "inter", sans-serif;
+  color: var(--text-color);
+  
+}
+
+#App {
+  background: var(--bg-url) no-repeat top center / cover;
+  height: 100vh;
+}
+
+/* Modificações container */
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 0px auto 0px;
+  padding-top: 56px;
+  padding: 0 24px;
+  
+}
+
+#links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+
+}
+
+#socialLinks{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-size: 24px;
+
+}
+
+/* media queries */
+@media(max-width: 700px){
+    :root{
+        --bg-url: url(../img/bg-mobile.jpg)
+    }
+   .light{
+    --bg-url: url(../img/bg-mobile-light.jpg)
+   }
+
+}
+
+
+/* Animações */
+@keyframes slide-in {
+    from { left: 0;
+    } to {
+        left:50%;
+    }
+    
+}
+@keyframes slide-out {
+    from { left: 50%;
+    } to {
+        left:0;
+    }
+    
+}
